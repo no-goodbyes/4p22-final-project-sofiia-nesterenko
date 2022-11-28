@@ -1,0 +1,139 @@
+.Header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;;
+  background-color: #1a226b;
+  height: calc(55/1920*100vw);
+  }
+
+.HeaderLogo {
+    width: fit-content;
+    padding-left: calc(20/1920*100vw);
+    margin-left: calc(16/1920*100vw);
+    display: flex;
+    justify-content: center;
+    outline: none;
+    align-items: center;
+    text-decoration: none;
+    gap: 30px;
+}
+.HeaderMenu {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    height: calc(42/1920*100vw);
+    margin-left: calc(1/1920*100vw);
+    margin-right: calc(20/1920*100vw);
+}
+.HeaderLoginButton{
+  display: flex;
+  justify-content: center;
+  width: calc(104/1920*100vw);
+  height: calc(40/1920*100vw);
+  border: calc(1/1920*100vw) solid #9DC2FF;
+  margin-left: calc(15/1920*100vw);
+  padding: calc(1/1920*100vw) calc(6/1920*100vw);
+  border-radius: calc(4/1920*100vw);
+  background-color: white;
+  font-size: calc(20/1920*100vw);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 0.0075em;
+  color: #2264D1;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+
+.HeaderLoginButtonSize{
+  width: calc(52/1920*100vw);
+  height: calc(40/1920*100vw);
+}
+
+.HeaderShopBasketButtonImg {
+  align-items: center;
+  padding-left: 0;
+  margin-left: 0;
+  width: calc(25/1920*100vw);
+  height: calc(25/1920*100vw);
+  
+}
+.HeaderShopBasketButtonImg *{
+  stroke: #2979FF;
+}
+
+@media screen and (max-device-width: 768px){
+
+  .Header {
+      gap: calc(15/768*100vw) 0;
+      padding: calc(8/768*100vw);
+      justify-content: space-around;
+      height: fit-content;
+  }
+  .HeaderLogo{
+      width: 45%;
+      height: calc(30/768*100vw);
+      padding-left: calc(10/768*100vw);
+      margin-left: calc(10/768*100vw);
+      display: flex;
+      justify-content: start;
+      outline: none;
+      align-items: center;
+      text-decoration: none;
+      order: -1;
+  }
+
+  .HeaderMenu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 50%;
+      height: 50%;
+      margin-left: calc(1/768*100vw);
+      margin-right: calc(20/768*100vw);
+  }
+  .HeaderLoginButton{
+      display: flex;
+      justify-content: center;
+      width: calc(140/768*100vw);
+      height: calc(50/768*100vw);
+      border: calc(1/768*100vw) solid #9DC2FF;
+      margin-left: calc(15/768*100vw);
+      padding: calc(1/768*100vw) calc(2/768*100vw);
+      border-radius: calc(4/768*100vw);
+      background-color: white;
+      font-family: 'Quicksand';
+      font-style: normal;
+      font-weight: 700;
+      font-size: calc(20/768*100vw);
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      letter-spacing: 0.0075em;
+      color: #2979FF;
+      cursor: pointer;
+      text-decoration: none;
+  
+  }
+  .HeaderLoginButtonSize{
+      width: calc(75/768*100vw);
+      height: calc(50/768*100vw);
+  }
+  .HeaderShopBasketButtonImg {
+      align-items: center;
+      padding-left: 0;
+      margin-left: 0;
+      width: calc(20/768*100vw);
+      height: calc(20/768*100vw);
+      
+  }
+  .HeaderShopBasketButtonImg *{
+      stroke: #2979FF;
+  }
+}
+  
+  
+ 

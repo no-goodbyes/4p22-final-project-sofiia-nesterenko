@@ -1,0 +1,10 @@
+.Card-container {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap:calc(30/1440*100vw);
+    column-gap: calc(40/1440*100vw) ;
+    justify-content: center;
+    padding: calc(20/1440*100vw);
+    margin: calc(20/1440*100vw);
+   
+}

@@ -1,0 +1,28 @@
+.CommonButton {
+  width: calc(80 / 1440 * 100vw);
+  height: calc(20 / 1440 * 100vw);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: calc(40 / 1440 * 100vw);
+  background: #1a226b;
+  border: none;
+  font-weight: 700;
+  font-size: calc(20 / 1440 * 100vw);
+  line-height: calc(16 / 1440 * 100vw);
+  color: #ffffff;
+}
+
+/* @media screen and (max-width: 768px) {
+
+.CommonButton {
+    width: calc(180 / 768 * 100vw);
+    height: calc(52 / 768 * 100vw);
+    margin-top: calc(40 / 768 * 100vw);
+    border: none;
+    background: #1a226b;
+    font-weight: 700;
+    font-size: calc(24 / 768 * 100vw);
+    line-height: calc(16 / 768 * 100vw);
+    color: #ffffff;
+  }
+} */
