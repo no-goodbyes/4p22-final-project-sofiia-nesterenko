@@ -1,17 +1,14 @@
 {
   "files": {
-    "main.css": "/4p22-final-project-sofiia-nesterenko/static/css/main.9b73101b.css",
-    "main.js": "/4p22-final-project-sofiia-nesterenko/static/js/main.a0f416cf.js",
-    "static/media/Diamond.svg": "/4p22-final-project-sofiia-nesterenko/static/media/Diamond.51edd56af53f5978ed4428fa22176827.svg",
-    "static/media/Hanger.svg": "/4p22-final-project-sofiia-nesterenko/static/media/Hanger.4337bf07c93a8540479ecb7625db7647.svg",
-    "static/media/Basket.svg": "/4p22-final-project-sofiia-nesterenko/static/media/Basket.970ae18c578601810ba02fd2f4456d0d.svg",
+    "main.css": "/4p22-final-project-sofiia-nesterenko/static/css/main.71042c52.css",
+    "main.js": "/4p22-final-project-sofiia-nesterenko/static/js/main.bbebcb57.js",
     "index.html": "/4p22-final-project-sofiia-nesterenko/index.html",
-    "static/media/Electric.svg": "/4p22-final-project-sofiia-nesterenko/static/media/Electric.e35b4761eea4453f494c391e78c4e988.svg",
-    "main.9b73101b.css.map": "/4p22-final-project-sofiia-nesterenko/static/css/main.9b73101b.css.map",
-    "main.a0f416cf.js.map": "/4p22-final-project-sofiia-nesterenko/static/js/main.a0f416cf.js.map"
+    "static/media/cart.svg": "/4p22-final-project-sofiia-nesterenko/static/media/cart.b399be59b1eea4f51df21aab8bef7970.svg",
+    "main.71042c52.css.map": "/4p22-final-project-sofiia-nesterenko/static/css/main.71042c52.css.map",
+    "main.bbebcb57.js.map": "/4p22-final-project-sofiia-nesterenko/static/js/main.bbebcb57.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b73101b.css",
-    "static/js/main.a0f416cf.js"
+    "static/css/main.71042c52.css",
+    "static/js/main.bbebcb57.js"
   ]
 }
