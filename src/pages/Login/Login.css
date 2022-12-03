@@ -88,7 +88,6 @@
 }
 
 @media screen and (max-width: 768px) {
-
   .entry-form {
     width: calc(600 / 768 * 100vw);
     height: calc(383 / 768 * 100vw);

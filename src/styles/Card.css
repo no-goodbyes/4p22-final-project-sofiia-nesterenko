@@ -3,176 +3,171 @@
   text-decoration: none;
 }
 .scale {
-    transition: 1s;
+  transition: 1s;
 }
 .scale:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 .card-info {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    justify-content: center;
-    width: calc(258/1440*100vw);
-    height: calc(432/1440*100vw);
-    box-shadow: 3px 3px 7px 7px #cccccc;
-    border-radius: calc(8/1440*100vw);
-    padding: calc(16/1440*100vw);
-    cursor: pointer;
-
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  width: calc(258 / 1440 * 100vw);
+  height: calc(432 / 1440 * 100vw);
+  box-shadow: 3px 3px 7px 7px #cccccc;
+  border-radius: calc(8 / 1440 * 100vw);
+  padding: calc(16 / 1440 * 100vw);
+  cursor: pointer;
 }
 .card-image {
-    width: calc(226/1440*100vw);
-    height: calc(224/1440*100vw);
-    border-radius: calc(4/1440*100vw);
+  width: calc(226 / 1440 * 100vw);
+  height: calc(224 / 1440 * 100vw);
+  border-radius: calc(4 / 1440 * 100vw);
 }
-.card-description{
+.card-description {
   overflow: hidden;
-    white-space: nowrap;
+  white-space: nowrap;
   text-overflow: ellipsis;
-  width: calc(226/1440*100vw);
-  height: calc(40/1440*100vw);
-  margin-top: calc(12/1440*100vw);
-  font-family: 'Roboto';
+  width: calc(226 / 1440 * 100vw);
+  height: calc(40 / 1440 * 100vw);
+  margin-top: calc(12 / 1440 * 100vw);
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: calc(14/1440*100vw);
+  font-size: calc(14 / 1440 * 100vw);
   letter-spacing: 0.0275em;
-  line-height: calc(20/1440*100vw);
-  color: #19191D;
+  line-height: calc(20 / 1440 * 100vw);
+  color: #19191d;
   text-align: left;
 }
-.card-price{
-  width: calc(126/1440*100vw);
-  height: calc(36/1440*100vw);
-  margin-top: calc(8/1440*100vw);
+.card-price {
+  width: calc(126 / 1440 * 100vw);
+  height: calc(36 / 1440 * 100vw);
+  margin-top: calc(8 / 1440 * 100vw);
   margin-bottom: 0;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  font-size: calc(20/1440*100vw);
+  font-size: calc(20 / 1440 * 100vw);
   align-items: center;
   color: #787878;
   text-align: left;
 }
-.card-heading{
+.card-heading {
   overflow: hidden;
-  width: calc(226/1440*100vw);
-  height: calc(21/1440*100vw);
-  margin-top: calc(18/1440*100vw);
-  font-family: 'Roboto';
+  width: calc(226 / 1440 * 100vw);
+  height: calc(21 / 1440 * 100vw);
+  margin-top: calc(18 / 1440 * 100vw);
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: calc(18/1440*100vw);
+  font-size: calc(18 / 1440 * 100vw);
   text-overflow: ellipsis;
-  line-height: calc(20/1440*100vw);
+  line-height: calc(20 / 1440 * 100vw);
   text-align: left;
   align-items: center;
   letter-spacing: 0.018em;
   color: #787885;
 }
-.card-description:hover{
+.card-description:hover {
   color: #787878;
 }
-.card-title:hover{
+.card-title:hover {
   color: black;
 }
-.card-button{
-  width: calc(100/1440*100vw);
-  height: calc(40/1440*100vw);
+.card-button {
+  width: calc(100 / 1440 * 100vw);
+  height: calc(40 / 1440 * 100vw);
   background: black;
-  border-radius: calc(20/1440*100vw);
+  border-radius: calc(20 / 1440 * 100vw);
   border: none;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: 500;
-  font-size: calc(14/1440*100vw);
+  font-size: calc(14 / 1440 * 100vw);
   align-items: center;
   align-self: flex-end;
   cursor: pointer;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .card-button:hover {
-    background-color: #787878;
+  background-color: #787878;
 }
 .card-button-bought {
-    border: none;
-    color: black;
-    background-color: #FFFFFF;
-    font-family: "Roboto";
-    font-weight: 700;
+  border: none;
+  color: black;
+  background-color: #ffffff;
+  font-family: "Roboto";
+  font-weight: 700;
 }
 .card-button-bought:hover {
-    color: #787878;
+  color: #787878;
 }
 .card-button-small {
-    width: calc(50/1440*100vw);
+  width: calc(50 / 1440 * 100vw);
 }
 
-@media screen and (max-device-width: 768px){
-  .card-info{
-      display: flex;
-      flex-direction: column;
-      align-self: center;
-      justify-content: center;
-      width: calc(290/768*100vw);
-      height: calc(500/768*100vw);
-      border-radius: calc(10/768*100vw);
-      padding: calc(16/768*100vw);
-      cursor: pointer;
+@media screen and (max-device-width: 768px) {
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    width: calc(290 / 768 * 100vw);
+    height: calc(500 / 768 * 100vw);
+    border-radius: calc(10 / 768 * 100vw);
+    padding: calc(16 / 768 * 100vw);
+    cursor: pointer;
   }
-  .card-image{
-      width: calc(260/768*100vw);
-      height: calc(260/768*100vw);
-      border-radius: calc(8/768*100vw);
+  .card-image {
+    width: calc(260 / 768 * 100vw);
+    height: calc(260 / 768 * 100vw);
+    border-radius: calc(8 / 768 * 100vw);
   }
-  .card-description{
-      overflow: hidden;
-      text-overflow: ellipsis;
-      width: calc(260/768*100vw);
-      height: calc(40/768*100vw);
-      margin-top: calc(12/768*100vw);
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 400;
-      font-size: calc(18/768*100vw);
-      line-height: calc(20/768*100vw);
+  .card-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(260 / 768 * 100vw);
+    height: calc(40 / 768 * 100vw);
+    margin-top: calc(12 / 768 * 100vw);
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(18 / 768 * 100vw);
+    line-height: calc(20 / 768 * 100vw);
   }
-  .card-price{
-      width: calc(120/768*100vw);
-      height: calc(42/768*100vw);
-      padding-top: calc(5/768*100vw);
-      margin-bottom: 0;
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 700;
-      font-size: calc(26/768*100vw);
+  .card-price {
+    width: calc(120 / 768 * 100vw);
+    height: calc(42 / 768 * 100vw);
+    padding-top: calc(5 / 768 * 100vw);
+    margin-bottom: 0;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(26 / 768 * 100vw);
   }
-  .card-heading{
-      width: calc(260/768*100vw);
-      height: calc(24/768*100vw);
-      margin-top: calc(18/768*100vw);
-      font-size: calc(16/768*100vw);
-      line-height: calc(20/768*100vw);
+  .card-heading {
+    width: calc(260 / 768 * 100vw);
+    height: calc(24 / 768 * 100vw);
+    margin-top: calc(18 / 768 * 100vw);
+    font-size: calc(16 / 768 * 100vw);
+    line-height: calc(20 / 768 * 100vw);
+  }
 
+  .card-button {
+    width: calc(100 / 768 * 100vw);
+    height: calc(50 / 768 * 100vw);
+    border: none;
+    border-radius: calc(20 / 768 * 100vw);
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(14 / 768 * 100vw);
+    cursor: pointer;
+    align-items: center;
   }
-
-  .card-button{
-      width: calc(100/768*100vw);
-      height: calc(50/768*100vw);
-      border: none;
-      border-radius: calc(20/768*100vw);
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 500;
-      font-size: calc(14/768*100vw);
-      cursor: pointer;
-      align-items: center;
-
+  .card-button-small {
+    width: calc(50 / 768 * 100vw);
   }
-    .card-button-small {
-        width: calc(50/768*100vw);
-    }
-
-
 }

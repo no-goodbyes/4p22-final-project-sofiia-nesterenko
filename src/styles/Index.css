@@ -1,36 +1,30 @@
-.button-group  button{
-    background-color: #FFFFFF;
-    color: #787878;
-    border: none;
-    font-family: "Roboto";
-    font-weight: 500;
+.button-group button {
+  background-color: #ffffff;
+  color: #787878;
+  border: none;
+  font-family: "Roboto";
+  font-weight: 500;
 }
-.button-group  button:hover {
-    background-color: #FFFFFF;
-    color: black;
+.button-group button:hover {
+  background-color: #ffffff;
+  color: black;
 }
-.button-group  button:active {
-    background-color: #FFFFFF!important;
+.button-group button:active {
+  background-color: #ffffff !important;
 }
 
 .search-input {
-    border: 2px solid #787878;
-    border-radius: 10px;
-    font-family: "Roboto";
-    font-weight: 400;
+  border: 2px solid #787878;
+  border-radius: 10px;
+  font-family: "Roboto";
+  font-weight: 400;
 }
 .search-input:focus {
-    box-shadow: 1px 2px #787878;
-    border-color: black;
+  box-shadow: 1px 2px #787878;
+  border-color: black;
 }
 
 .search-input::placeholder {
-    font-weight: 500;
-    color: #cccccc;
+  font-weight: 500;
+  color: #cccccc;
 }
-
-
-
-
-
-

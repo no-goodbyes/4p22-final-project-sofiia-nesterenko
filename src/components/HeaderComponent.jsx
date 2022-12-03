@@ -1,15 +1,15 @@
-import React, {useState} from 'react';
-import { Container, Button, Navbar, Nav } from 'react-bootstrap';
-import {Link} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
+import React from 'react';
+import { Container, Navbar, Nav } from 'react-bootstrap';
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import '../styles/HeaderComponent.css';
 import '../styles/ShoppingCartIcon.css';
-import {ReactComponent as Basket} from "../assets/img/cart.svg";
+import { ReactComponent as Basket } from "../assets/img/cart.svg";
 
 
 const HeaderComponent = () => {
     const basket = useSelector((state) => state.basket);
-    const dispatch = useDispatch();
+
 
 
     return (
@@ -22,12 +22,12 @@ const HeaderComponent = () => {
                         <Nav.Link><Link to={'/'}>Home</Link></Nav.Link>
 
                         <Nav.Link><Link to={'/shoppingCart'} className="header__shopping-cart" >
-                        <Basket className="shopping-cart-icon"/>
-                            { Object.values(basket).length > 0 && <span className="shopping-cart-item" >{Object.values(basket).reduce((acc, item) => {
-                            acc += item;
+                            <Basket className="shopping-cart-icon" />
+                            {Object.values(basket).length > 0 && <span className="shopping-cart-item" >{Object.values(basket).reduce((acc, item) => {
+                                acc += item;
 
-                            return acc;
-                            },0) }</span>}
+                                return acc;
+                            }, 0)}</span>}
                         </Link></Nav.Link>
                         <Nav.Link><Link to={'/login'}>Log in</Link></Nav.Link>
                         <Nav.Link><Link to={'/auth'}>Registration</Link></Nav.Link>

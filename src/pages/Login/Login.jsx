@@ -1,62 +1,69 @@
-import React, {useEffect, useState} from "react";
-import './Login.css';
-
+import React, { useEffect, useState } from "react";
+import "./Login.css";
 
 const Login = () => {
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    console.log({email, password});
-  }
-
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [emailDirty, setEmailDirty] = useState(false);
   const [passwordDirty, setPasswordDirty] = useState(false);
-  const [emailError, setEmailError] = useState('Поле обязательно для заполнения');
-  const [passwordError, setPasswordError] = useState('Поле обязательно для заполнения');
-  const  [formValid, setFormValid] = useState(false)
+  const [emailError, setEmailError] = useState(
+    "Поле обязательно для заполнения"
+  );
+  const [passwordError, setPasswordError] = useState(
+    "Поле обязательно для заполнения"
+  );
+  const [formValid, setFormValid] = useState(false);
 
   useEffect(() => {
-      if(emailError || passwordError) {
-          setFormValid(false)
-      } else {
-        setFormValid(true)
-      }
-  }, [emailError, passwordError])
+    if (emailError || passwordError) {
+      setFormValid(false);
+    } else {
+      setFormValid(true);
+    }
+  }, [emailError, passwordError]);
 
   const emailHandler = (e) => {
-    setEmail(e.target.value)
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    setEmail(e.target.value);
+    const re =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (!re.test(String(e.target.value).toLowerCase())) {
-      setEmailError('Email введён некорректно')
+      setEmailError("Email введён некорректно");
     } else {
-      setEmailError('')
+      setEmailError("");
     }
-  }
+  };
 
   const passwordHandler = (e) => {
-    setPassword(e.target.value)
-    if(e.target.value.length < 8) {
-      setPasswordError('Пароль должен содержать не менее 8 символов')
-      if(!e.target.value) {
-        setPasswordError('Поле обязательно для заполнения')
+    setPassword(e.target.value);
+    if (e.target.value.length < 8) {
+      setPasswordError("Пароль должен содержать не менее 8 символов");
+      if (!e.target.value) {
+        setPasswordError("Поле обязательно для заполнения");
       }
     } else {
-      setPasswordError('')
+      setPasswordError("");
     }
-  }
+  };
 
   const blurHandler = (e) => {
     switch (e.target.name) {
-      case 'email':
-        setEmailDirty(true)
-        break
-      case 'password':
-        setPasswordDirty(true)
-        break
+      case "email":
+        setEmailDirty(true);
+        break;
+      case "password":
+        setPasswordDirty(true);
+        break;
     }
+  };
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(person);
   }
+
+  const person = {};
+  person.email = email;
+  person.password = password;
 
   return (
     <div className="d-flex justify-content-center align-items-center">
@@ -66,7 +73,11 @@ const Login = () => {
           <form className="entry-form__form" noValidate onSubmit={handleSubmit}>
             <label className="entry-form__label" htmlFor="email">
               Email
-              {(emailDirty && emailError) && <span style={{color: 'red', float: 'right'}}>{emailError}</span>}
+              {emailDirty && emailError && (
+                <span style={{ color: "red", float: "right" }}>
+                  {emailError}
+                </span>
+              )}
             </label>
             <input
               className="entry-form__input"
@@ -74,13 +85,17 @@ const Login = () => {
               type="email"
               name="email"
               placeholder="Введите email"
-              onBlur={e=> blurHandler(e)}
+              onBlur={(e) => blurHandler(e)}
               value={email}
-              onChange={e => emailHandler(e)}
+              onChange={(e) => emailHandler(e)}
             />
             <label className="entry-form__label" htmlFor="password">
               Пароль
-              {(passwordDirty && passwordError) && <span style={{color: 'red', float: 'right'}}>{passwordError}</span>}
+              {passwordDirty && passwordError && (
+                <span style={{ color: "red", float: "right" }}>
+                  {passwordError}
+                </span>
+              )}
             </label>
             <input
               className="entry-form__input"
@@ -88,11 +103,17 @@ const Login = () => {
               type="password"
               name="password"
               placeholder="Введите пароль"
-              onBlur={e=> blurHandler(e)}
+              onBlur={(e) => blurHandler(e)}
               value={password}
-              onChange={e => passwordHandler(e)}
+              onChange={(e) => passwordHandler(e)}
             />
-            <button type="submit" disabled={!formValid} className="entry-form__button">Войти</button>
+            <button
+              type="submit"
+              disabled={!formValid}
+              className="entry-form__button"
+            >
+              Войти
+            </button>
           </form>
         </div>
       </main>
