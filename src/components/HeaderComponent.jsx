@@ -15,13 +15,13 @@ const HeaderComponent = () => {
     return (
         <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
             <Container>
-                <Navbar.Brand>CoolShop</Navbar.Brand>
+                <Navbar.Brand><Link to={'/'}>CoolShop</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                         <Nav.Link><Link to={'/'}>Home</Link></Nav.Link>
 
-                        <Nav.Link><Link to={'/shoppingCart'} style={{fontSize: '15px', color: 'skyblue'}}>
+                        <Nav.Link><Link to={'/shoppingCart'} className="header__shopping-cart" >
                         <Basket className="shopping-cart-icon"/>
                             { Object.values(basket).length > 0 && <span className="shopping-cart-item" >{Object.values(basket).reduce((acc, item) => {
                             acc += item;

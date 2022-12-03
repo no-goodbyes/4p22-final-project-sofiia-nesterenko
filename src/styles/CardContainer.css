@@ -1,4 +1,4 @@
-.Card-container {
+.card-container {
     display: flex;
     flex-wrap: wrap;
     row-gap:calc(50/1440*100vw);

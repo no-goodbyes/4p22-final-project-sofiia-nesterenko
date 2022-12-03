@@ -83,6 +83,9 @@
 .entry-form__button:hover {
   background-color: #787878;
 }
+.entry-form__button:active {
+  background-color: orange;
+}
 
 @media screen and (max-width: 768px) {
 

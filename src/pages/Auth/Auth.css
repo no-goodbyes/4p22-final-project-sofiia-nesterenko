@@ -250,6 +250,9 @@ input[type="radio"]:checked + label:after {
 .reg-form__button:hover {
   background-color: #787878;
 }
+.reg-form__button:active {
+  background-color: #787878;
+}
 
 
 /* Звездочка */

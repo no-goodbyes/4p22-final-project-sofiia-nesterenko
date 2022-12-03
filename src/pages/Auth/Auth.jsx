@@ -3,24 +3,32 @@ import "./Auth.css";
 import {Container} from "react-bootstrap";
 const Auth = () => {
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log({email, password, name, comment});
+  }
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
+  const [comment, setComment] = useState('');
   const [nameDirty, setNameDirty] = useState(false);
   const [emailDirty, setEmailDirty] = useState(false);
   const [passwordDirty, setPasswordDirty] = useState(false);
+  const [commentDirty, setCommentDirty] = useState(false);
   const [emailError, setEmailError] = useState('Поле обязательно для заполнения');
   const [passwordError, setPasswordError] = useState('Поле обязательно для заполнения');
   const [nameError, setNameError] = useState('Поле обязательно для заполнения');
+  const [commentError, setCommentError] = useState('Введите ваше сообщение');
   const [formValid, setFormValid] = useState(false);
 
   useEffect(() => {
-    if(emailError || passwordError || nameError) {
+    if(emailError || passwordError || nameError || commentError) {
       setFormValid(false)
     } else {
       setFormValid(true)
     }
-  }, [emailError, passwordError, nameError])
+  }, [emailError, passwordError, nameError, commentError])
 
   const emailHandler = (e) => {
     setEmail(e.target.value)
@@ -56,6 +64,18 @@ const Auth = () => {
     }
   }
 
+  const commentHandler = (e) => {
+    setComment(e.target.value)
+    if(e.target.value.length > 200) {
+      setCommentError('Слишком длинное сообщение')
+    if(!e.target.value) {
+      setCommentError('Введите ваше сообщение')
+    }
+      } else {
+      setCommentError('')
+    }
+  }
+
 
   const blurHandler = (e) => {
     switch (e.target.name) {
@@ -68,6 +88,8 @@ const Auth = () => {
       case 'name':
         setNameDirty(true)
             break
+      case 'comment':
+        setCommentDirty(true)
     }
   }
 
@@ -77,7 +99,7 @@ const Auth = () => {
       <Container className="d-flex justify-content-center align-items-center">
         <div className="reg-form">
           <h1 className="reg-form__heading">Регистрация</h1>
-          <form className="reg-form__form" noValidate>
+          <form className="reg-form__form" noValidate onSubmit={handleSubmit}>
             <label className="reg-form__label required" htmlFor="name">
               Имя
               {(nameDirty && nameError) && <span style={{color: 'red', float: 'right'}}>{nameError}</span>}
@@ -148,12 +170,18 @@ const Auth = () => {
               </div>
             </div>
             <div className="reg-form__textarea-comment">
-              <span className="textarea-comment__span">О себе</span>
-              <textarea
-                className="textarea-comment__textarea"
-                name="comment"
-                id="comment"
-                placeholder="Расскажите о себе..."
+              <label className="textarea-comment__span">
+                Сообщение
+                {(commentDirty && commentError) && <span style={{color: 'red', float: 'right'}}>{commentError}
+              </span>}
+                </label>
+              <textarea onBlur={e=> blurHandler(e)}
+                        onChange={e => commentHandler(e)}
+                        value={comment}
+                        className="textarea-comment__textarea"
+                        name="comment"
+                        id="comment"
+                        placeholder="Расскажите о себе..."
               ></textarea>
             </div>
             <div className="reg-form__checkbox ">
@@ -169,7 +197,7 @@ const Auth = () => {
               </label>
             </div>
 
-            <button disabled={!formValid}  className="reg-form__button" id="reg-button">
+            <button type="submit" disabled={!formValid}  className="reg-form__button" id="reg-button">
               Регистрация
             </button>
           </form>

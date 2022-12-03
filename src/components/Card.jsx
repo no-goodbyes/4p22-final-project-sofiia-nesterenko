@@ -23,8 +23,8 @@ const Card = ({title, image, price, description, id}) => {
 
     
     return (
-        <Link to={`products/${id}`} className='card'>
-            <div className='card-info scale'>
+        <Link to={`products/${id}`} className='card scale'>
+            <div className='card-info'>
             <img className='card-image' src={image} alt={title} />
             
                 <h2 className='card-heading'>{title}</h2>

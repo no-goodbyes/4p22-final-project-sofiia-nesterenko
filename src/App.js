@@ -1,7 +1,7 @@
 import './App.css';
 import {Routes, Route} from "react-router-dom"
 
-import IndexPage from './pages/Index/Index';
+import IndexPage from './pages/Index/IndexPage';
 import Login from './pages/Login/Login';
 import Auth from './pages/Auth/Auth';
 import ProductPage from './pages/Poducts/Products';

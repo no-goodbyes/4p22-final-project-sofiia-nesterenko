@@ -1,14 +1,13 @@
 import React from 'react';
-import CategoriesBar from '../../components/CategoriesBar';
 import HeaderComponent from '../../components/HeaderComponent';
+import Index from '../../components/Index';
 
 
 const IndexPage = () => {
     return (
         <div>
             <HeaderComponent/>
-            <CategoriesBar/>
-
+            <Index/>
         </div>
     );
 };

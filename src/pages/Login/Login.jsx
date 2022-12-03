@@ -4,6 +4,11 @@ import './Login.css';
 
 const Login = () => {
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log({email, password});
+  }
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [emailDirty, setEmailDirty] = useState(false);
@@ -58,7 +63,7 @@ const Login = () => {
       <main>
         <div className="entry-form">
           <h1 className="entry-form__heading">Вход</h1>
-          <form className="entry-form__form" noValidate>
+          <form className="entry-form__form" noValidate onSubmit={handleSubmit}>
             <label className="entry-form__label" htmlFor="email">
               Email
               {(emailDirty && emailError) && <span style={{color: 'red', float: 'right'}}>{emailError}</span>}
@@ -87,7 +92,7 @@ const Login = () => {
               value={password}
               onChange={e => passwordHandler(e)}
             />
-            <button disabled={!formValid} className="entry-form__button">Войти</button>
+            <button type="submit" disabled={!formValid} className="entry-form__button">Войти</button>
           </form>
         </div>
       </main>

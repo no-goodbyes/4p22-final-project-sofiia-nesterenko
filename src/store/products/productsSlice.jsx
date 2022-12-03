@@ -1,17 +1,62 @@
-import { createSlice } from "@reduxjs/toolkit";
+// import { createSlice } from "@reduxjs/toolkit";
+//
+// export const productsSlice = createSlice({
+//     name: 'products',
+//     initialState: [],
+//     reducers: {
+//         setProducts: (state, action)  => {
+//             state = action.payload;
+//
+//             return state;
+//         }
+//     }
+// })
+//
+// export const { setProducts } = productsSlice.actions;
+//
+// export default productsSlice.reducer;
+//
+//
+//
+//
+//
+
+
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+
+const getProducts = createAsyncThunk(
+    'products/getProducts',
+    async (thunkAPI) => {
+        const response = await fetch('https://fakestoreapi.com/products');
+        const result = await response.json();
+
+        return result;
+
+    }
+)
 
 export const productsSlice = createSlice({
     name: 'products',
-    initialState: {},
-    reducers: {
-        setProducts: (state, action) => {
-            state = action.payload;
+    initialState: {
+        entities: [],
+        loading: false
+    },
+    extraReducers: {
+        [getProducts.pending]: (state) => {
+            state.loading = true;
+        },
+        [getProducts.fulfilled]: (state, { payload }) => {
+            state.loading = false;
+            state.entities = payload;
+        },
+        [getProducts.rejected]: (state) => {
+            state.loading = false;
+        },
 
-            return state;
-        }
     }
-})
-
-export const { setProducts } = productsSlice.actions;
+});
 
 export default productsSlice.reducer;
+
+export { getProducts };
+

@@ -5,3 +5,39 @@
 .nav-link a:hover {
     color: white;
 }
+.navbar-brand  a {
+    color: orange;
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: calc(45/1440 * 100vw);
+}
+.header__shopping-cart{
+    position: relative;
+}
+.header__shopping-cart span {
+    font-size: calc(14/1440 * 100vw);
+    font-family: 'Roboto';
+    color: #787878;
+    position: absolute;
+    left: 15px;
+    background-color: orange;
+    border-radius: 100%;
+    width:calc(18/1440 * 100vw);
+    height:calc(18/1440 * 100vw);
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-brand  a {
+        font-size: calc(30/768 * 100vw);
+    }
+
+    .header__shopping-cart span {
+        font-size: calc(14/768 * 100vw);
+        width:calc(18/768 * 100vw);
+        height:calc(18/768 * 100vw);
+    }
+
+}
