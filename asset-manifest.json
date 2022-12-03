@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/4p22-final-project-sofiia-nesterenko/static/css/main.71042c52.css",
-    "main.js": "/4p22-final-project-sofiia-nesterenko/static/js/main.bbebcb57.js",
+    "main.css": "/4p22-final-project-sofiia-nesterenko/static/css/main.636d1935.css",
+    "main.js": "/4p22-final-project-sofiia-nesterenko/static/js/main.e9a9b067.js",
     "index.html": "/4p22-final-project-sofiia-nesterenko/index.html",
     "static/media/cart.svg": "/4p22-final-project-sofiia-nesterenko/static/media/cart.b399be59b1eea4f51df21aab8bef7970.svg",
-    "main.71042c52.css.map": "/4p22-final-project-sofiia-nesterenko/static/css/main.71042c52.css.map",
-    "main.bbebcb57.js.map": "/4p22-final-project-sofiia-nesterenko/static/js/main.bbebcb57.js.map"
+    "main.636d1935.css.map": "/4p22-final-project-sofiia-nesterenko/static/css/main.636d1935.css.map",
+    "main.e9a9b067.js.map": "/4p22-final-project-sofiia-nesterenko/static/js/main.e9a9b067.js.map"
   },
   "entrypoints": [
-    "static/css/main.71042c52.css",
-    "static/js/main.bbebcb57.js"
+    "static/css/main.636d1935.css",
+    "static/js/main.e9a9b067.js"
   ]
 }
